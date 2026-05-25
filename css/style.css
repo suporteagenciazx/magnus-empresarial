@@ -4,6 +4,7 @@
 @import url(./localizacoes.css);
 @import url(./feedback.css);
 @import url(./animations.css);
+@import url(./carrossel.css);
 
 .cabecalho {
     max-width: 120rem;

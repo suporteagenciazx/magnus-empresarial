@@ -45,7 +45,7 @@ body {
     color: #fff;
 }    
 
-.cabecalho, .secao-principal, .container-motivos, #especialidades, .secao-metodologia, .secao-localizacoes
+.cabecalho, .secao-principal, .container-motivos, .secao-carrossel, #especialidades, .secao-metodologia, .secao-localizacoes
 , .secao-modulos, .secao-planos, .secao-feedback, .secao-perguntas {
     max-width: 120rem;
     margin: 0 auto;
