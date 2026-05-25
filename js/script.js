@@ -1,46 +1,37 @@
 const botaoMenu = document.getElementById('botao-menu');
-botaoMenu.addEventListener("click", menuAtivo);
-botaoMenu.addEventListener("touchstart", menuAtivo);
+const navMenu = document.getElementById('nav-menu');
+
 function menuAtivo(menu) {
-    if(menu.type === 'touchstart') {
-        menu.preventoDefault()
+    if (menu.type === 'touchstart') {
+        menu.preventDefault();
     }
 
-    let navMenu = document.getElementById("nav-menu");
-    navMenu.classList.toggle("active");
+    navMenu.classList.toggle('active');
 
-    const active = navMenu.classList.contains('active')
-    menu.currentTarget.setAttribute('aria-expanded', active)
+    const active = navMenu.classList.contains('active');
+    menu.currentTarget.setAttribute('aria-expanded', active);
 
-    if(active) {
-        menu.currentTarget.setAttribute('aria-label','Fechar menu')
-    } else{
-        menu.currentTarget.setAttribute('aria-label','Abrir menu')
+    if (active) {
+        menu.currentTarget.setAttribute('aria-label', 'Fechar menu');
+    } else {
+        menu.currentTarget.setAttribute('aria-label', 'Abrir menu');
     }
 }
 
-const button = document.querySelectorAll(".botao-carrosel");
-const cardsMentor = document.querySelectorAll('.card-mentor');
-let pontoInicial = 0;
-const maxItens = cardsMentor.length;
-button.forEach(botao => {
-    botao.addEventListener("click", ()=> {
-        const isLeft = botao.classList.contains('button-control-left');
-        if(isLeft) {pontoInicial--} else {pontoInicial++};
+if (botaoMenu) {
+    botaoMenu.addEventListener('click', menuAtivo);
+    botaoMenu.addEventListener('touchstart', menuAtivo);
+}
 
-        if(pontoInicial >= maxItens) {
-            pontoInicial = 0
-        } else if (pontoInicial < 0) {
-            pontoInicial = maxItens - 1
+document.querySelectorAll('#nav-menu .lista-mobile a').forEach((link) => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        if (botaoMenu) {
+            botaoMenu.setAttribute('aria-expanded', 'false');
+            botaoMenu.setAttribute('aria-label', 'Abrir menu');
         }
-
-        cardsMentor[pontoInicial].scrollIntoView({
-            inline: "center",
-            behavior: "smooth",
-            block: "nearest"
-        })
-    })
-})
+    });
+});
 
 const buttonMetodologia = [...document.querySelector(".box-buttons").children];
 const boxDescricao = [...document.querySelector(".box-descricao").children];
@@ -73,6 +64,7 @@ window.addEventListener("load", execute())
 const botaoFeedback = document.querySelectorAll(".botao-feedback_arrow");
 const cardFeedback = document.querySelectorAll('.card-feedback');
 const cardMax = cardFeedback.length;
+let pontoInicial = 0;
 botaoFeedback.forEach(botao => {
     botao.addEventListener("click", ()=> {
         const isLeft = botao.classList.contains('button-control-left');
@@ -153,3 +145,6 @@ const dropdownResposta = document.querySelectorAll(".bloco-pergunta");
 dropdownResposta.forEach(lista=> {
     lista.addEventListener("click", (e)=>{e.currentTarget.classList.toggle("active")})
 })
+
+const footerYear = document.getElementById('footer-year');
+if (footerYear) footerYear.textContent = String(new Date().getFullYear());

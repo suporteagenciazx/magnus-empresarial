@@ -1,12 +1,35 @@
 @import url(./config.css);
+@import url(./especialidades.css);
+@import url(./footer.css);
+@import url(./localizacoes.css);
+@import url(./feedback.css);
+@import url(./animations.css);
 
 .cabecalho {
+    max-width: 120rem;
     margin: 0 auto;
-    height: 12rem;
+    padding: 1rem;
+    min-height: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    gap: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.cabecalho-marca {
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+.cabecalho-logo-img {
+    max-width: 180px;
+    height: auto;
+    display: block;
 }
 
 .cabecalho .cabecalho-logo {
@@ -23,7 +46,80 @@
 .cabecalho .cabecalho-nav {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.cabecalho .menu-desktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho .menu-desktop a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.25s ease;
+    position: relative;
+}
+
+.cabecalho .menu-desktop a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #99C720, #025D40);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.cabecalho .menu-desktop a:hover {
+    color: #025D40;
+}
+
+.cabecalho .menu-desktop a:hover::after {
+    transform: scaleX(1);
+}
+
+.cabecalho .botao-whatsapp {
+    flex-shrink: 0;
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #25D366, #20BA5A);
+    color: #fff;
+    box-shadow: 0 18px 42px rgba(37, 211, 102, 0.26);
+    text-decoration: none;
+    z-index: 1000;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.whatsapp-float:hover {
+    background: linear-gradient(135deg, #22C059, #1DA94E);
+    transform: translateY(-3px);
+}
+
+.whatsapp-float svg {
+    width: 26px;
+    height: 26px;
+    display: block;
 }
 
 .cabecalho .cabecalho-nav .lista-mobile {
@@ -42,7 +138,7 @@
     z-index: 1000;
 }
 .cabecalho  #nav-menu.active .lista-mobile {
-    height: 25rem;
+    height: 32rem;
     padding: 2rem 1rem;
 }
 .cabecalho  #nav-menu .lista-mobile .link-menu {
@@ -51,8 +147,13 @@
     transition: all .7s;
 }
 .cabecalho  #nav-menu .lista-mobile .link-menu:hover {
-    color: #025D40;
+    color: #99C720;
     border-bottom: 1px solid #fff;
+}
+
+.cabecalho #nav-menu .lista-mobile .link-menu-whatsapp {
+    color: #25D366;
+    font-weight: 700;
 }
 .cabecalho  #nav-menu .lista-mobile .link-menu .icone {
     margin-right: 1rem;
@@ -94,27 +195,6 @@
     transform: rotate(-135deg);
     top: -7px;
     color: #fa314a;
-}
-
-.cabecalho .cabecalho-nav .botao-plano, .botao-assinante {
-    width: 20rem;
-    padding: 1rem 0;
-    background-color: transparent;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #025D40;
-    border-radius: 2rem;
-}
-.cabecalho .cabecalho-nav .botao-assinante {
-    border-radius: 2rem;
-    border: 0.1rem solid #025D40;
-}
-.cabecalho .cabecalho-nav button:hover  {
-    background-color: #025D40;
-    color: #fff;
-}
-.cabecalho .cabecalho-nav .botao-assinante .icone {
-    padding-right: 1rem;
 }
 
 .secao-principal {
@@ -255,7 +335,7 @@
 
 .bloco-tecnicas .card .titulo-card {
     font-size: 2.2rem;
-    color: #000;
+    color: #99C720;
 }
 
 .bloco-tecnicas .card .descricao-card{
@@ -288,112 +368,6 @@
     color: #d5d5d5;
     text-align: center;
 }
-
-.secao-mentores {
-    padding: 3rem 2rem;
-    position: relative;
-}
-
-.secao-mentores .cabecalho-mentor {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-
-.secao-mentores .cabecalho-mentor .titulo {
-    max-width: 45rem;
-    font-size: 3.2rem;
-    font-weight: 700;
-    color: #ccc
-}
-
-.secao-mentores .cabecalho-mentor .titulo .destaque {
-    color: #99C720;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: .5rem;
-}
-
-.secao-mentores .cabecalho-mentor .border {
-    font-size: 5rem;
-}
-
-.secao-mentores .cabecalho-mentor .border::before {
-    content: '';
-    border-left: .2rem solid #99C720;
-}
-
-.secao-mentores .cabecalho-mentor .descricao-titulo {
-    font-size: 1.9rem;
-    color: #ccc;
-    max-width: 40rem;
-}
-
-.secao-mentores .container-mentor {
-    display: flex;
-    gap: 1rem;
-    position: relative;
-    margin: 3rem 0;
-}
-
-.secao-mentores .container-mentor .imagem-card {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.container-mentor .card-mentor  {
-    width: 30rem;
-    height: 60rem;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.container-mentor .card-mentor .card-descricao {
-    width: 30rem;
-    position: absolute;
-    bottom: 3rem;
-}
-
-.container-mentor .card-mentor .card-descricao .nome {
-    color: #99C720;
-    font-weight: 900;
-    font-size: 2.5rem;
-    padding-left: 2rem;
-}
-
-.container-mentor .card-mentor .card-descricao .descricao-mentor {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: #fff;
-    padding: 0 0 2rem 2rem;
-}
-
-.secao-mentores #mentor-button-left {
-    position: absolute;
-    top: 50%;
-    left: 3.5rem;
-}
-.secao-mentores #mentor-button-right {
-    position: absolute;
-    top: 50%;
-    right: 3.5rem;
-}
-.secao-mentores #mentor-button-left, #mentor-button-right {
-    background-color: #99C720;
-    color: #fff;
-}
-.secao-mentores #mentor-button-left:hover,  #mentor-button-right:hover  {
-    background-color: #025D40;
-    border-color: transparent;
-}
-
-.secao-mentores .mentor-botao {
-    width: 60%;
-    margin: 0 auto;
-    display: block;
-} 
 
 .secao-numeros {
     width: 100%;
@@ -559,7 +533,7 @@
 }
 
 .container-modulo .lista-didatica .item-didatica {
-    color: #ccc;
+    color: #005F40;
     margin: 1rem 0;
 }
 
@@ -580,78 +554,6 @@
     background-color: #0f1116;
     color: #ccc;
     border-radius: .3rem;
-}
-
-.secao-feedback {
-    height: 42rem;
-    margin: 5rem auto 0 auto;
-}
-
-.secao-feedback .cabecalho-feedback  {
-    padding-left: 1rem;
-}
-
-.secao-feedback .cabecalho-feedback .titulo-feedback {
-    color: #ccc;
-    font-size: 3rem;
-}
-
-.secao-feedback .cabecalho-feedback .titulo-feedback .destaque {
-    color: #99C720;
-    font-size: 3rem;
-    border-bottom: 1px solid #99C720;
-}
-
-.secao-feedback .cabecalho-feedback .subtitulo-feedback {
-    color: #99C720;
-    font-weight: 600;
-    font-size: 2rem;
-}
-
-.secao-feedback .container-feedback {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-left: 5rem;
-}
-
-.secao-feedback .container-feedback .card-feedback {
-    width: 35rem;
-    height: 25rem;
-    background-color: #0f1116;
-    border-radius: 1rem;
-    padding: 2rem;
-    flex-shrink: 0;
-}
-
-.secao-feedback .container-feedback .card-feedback .perfil {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 1rem;
-}
-
-.card-feedback .perfil .foto-perfil{
-    max-width: 5rem;
-    height: 5rem;
-    object-fit: cover;
-    border-radius: 100%;
-}
-.card-feedback .perfil .nome-perfil{
-    color: #fff;
-}
-
-.secao-feedback .container-feedback .descricao-feedback {
-    color: #ccc;
-}
-
-.secao-feedback .feedback-button {
-    width: 100%;
-    margin: 2rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
 }
 
 .secao-planos {
@@ -911,93 +813,6 @@
     display: block;
 }
 
-.footer {
-    width: 100%;
-    height: 30rem;
-    background-color: #0f1116;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-top {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1rem;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-bottom: 10rem;
-}
-
-.logo img {
-    max-width: 200px; /* Garante que a imagem não ultrapasse a largura da div */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-left: 0px;
-    align-items: center;
-    padding-bottom: 3rem;
-    margin-right: 5rem;
-}
-
-.info {
-    flex: 1;
-    max-width: 50%;
-}
-
-.footer .footer-titulo {
-    font-weight: 500;
-    color: #fff;
-}
-/* Media Queries para responsividade */
-
-/* Tablets e dispositivos maiores */
-@media screen and (min-width: 768px) {
-    .footer {
-        height: auto;
-    }
-
-    .footer-bottom {
-        
-    }
-
-    .info {
-        max-width: 60%;
-    }
-}
-
-/* Desktops e dispositivos maiores */
-@media screen and (min-width: 1024px) {
-    .footer {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-}
-/* Dispositivos móveis */
-@media screen and (max-width: 767px) {
-    .footer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        height: 60rem;
-    }
-    .footer-titulo {
-        
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .info {
-        max-width: 100%;
-    }
-}
-
 @media (max-width: 768px) {
     .secao-principal {
         flex-direction: column;
@@ -1044,23 +859,13 @@
         font-size: 3.9rem;
     }
 
-    .cabecalho-nav .cabecalho-botao {
+    .cabecalho .menu-desktop,
+    .cabecalho .botao-whatsapp {
         display: none;
     }
     .cabecalho .cabecalho-nav #botao-menu {
         display: block;
     }
-    .secao-mentores .cabecalho-mentor .titulo {
-        width: 100%;
-        max-width: none;
-        font-size: 2.2rem;
-    }
-    .secao-mentores .cabecalho-mentor .descricao-titulo {
-        font-size: 1.5rem;
-    }
-    .secao-mentores .mentor-botao  {
-        width: 80%;
-    } 
     .secao-feedback .cabecalho-feedback .titulo-feedback, .titulo-feedback .destaque{
         font-size: 2.5rem;
         max-width: 95%;
@@ -1071,6 +876,19 @@
         display: none;
     }
 }
+@media (max-width: 720px) {
+    .whatsapp-float {
+        right: 16px;
+        bottom: 16px;
+        width: 52px;
+        height: 52px;
+    }
+    .whatsapp-float svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
 @media (max-width: 500px) {
     html {
         font-size: 55%;
@@ -1088,19 +906,6 @@
     }
     .secao-numeros .container-numeros .bloco-numeros .descricao {
         max-width: 30rem;
-        font-size: 2rem;
-    }
-    .cabecalho-mentor {
-        flex-direction: column;
-        text-align: center;
-    }
-    .cabecalho-mentor .border {
-        display: none;
-    }
-    .secao-mentores .cabecalho-mentor .titulo {
-        font-size: 3rem;
-    }
-    .secao-mentores .cabecalho-mentor .descricao-titulo {
         font-size: 2rem;
     }
     .secao-feedback .container-feedback {
@@ -1124,12 +929,6 @@
     }
     .secao-principal .container-principal .texto-preco {
         font-size: 1.3rem;
-    }
-    .secao-mentores .cabecalho-mentor .titulo {
-        font-size: 2.5rem;
-    }
-    .secao-mentores .cabecalho-mentor .descricao-titulo {
-        display: none;
     }
     .secao-planos .cabecalho .titulo-header{
         font-size: 2.6rem;

@@ -11,186 +11,443 @@
 </head>
 <body>
     <header class="cabecalho">
-        <img src="img/logo-magnus1-semfundo.png" alt="" style="max-width: 180px;">
+        <a href="#inicio" class="cabecalho-marca" aria-label="Magnus Empresarial — início">
+            <img src="img/logo-magnus1-semfundo.png" alt="Magnus Empresarial" class="cabecalho-logo-img">
+        </a>
         <nav class="cabecalho-nav" id="nav-menu">
-            <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5511996855623'" class="cabecalho-botao botao-plano" aria-label="Ir para assinatura e planos">Consultoria Empresarial</button>
-            <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5511996855623'" class=" cabecalho-botao botao-assinante"><i class="fa-solid fa-user icone" aria-label="Fazer login"></i> Liberação de Crédito </button>
+            <ul class="menu-desktop" aria-label="Menu principal">
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#especialidades">Equipe</a></li>
+                <li><a href="#metodologia">Metodologia</a></li>
+                <li><a href="#conteudo">Conteúdo</a></li>
+                <li><a href="#localizacoes">Localizações</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <a class="cabecalho-botao botao-whatsapp" href="https://api.whatsapp.com/send?phone=5511996855623" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.1-.472-.149-.672.15-.199.297-.771.966-.945 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.521.149-.174.199-.298.298-.497.1-.199.05-.373-.025-.522-.074-.149-.672-1.619-.92-2.22-.242-.582-.487-.503-.672-.513l-.573-.01c-.199 0-.522.074-.795.373s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.199 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.007-1.413.248-.694.248-1.289.173-1.414-.074-.124-.272-.199-.57-.347z" fill="#fff"/>
+                    <path d="M12.004 2.003A9.95 9.95 0 0 0 2.02 12.003c0 1.751.457 3.448 1.326 4.942L2 22l4.237-1.114a9.956 9.956 0 0 0 5.749 1.745h.001c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.087a8.098 8.098 0 0 1-4.234-1.132l-.303-.18-2.51.66.67-2.449-.197-.316A8.088 8.088 0 0 1 3.92 12.003a8.081 8.081 0 0 1 8.083-8.08 8.08 8.08 0 0 1 8.08 8.08 8.081 8.081 0 0 1-8.08 8.087z" fill="#fff"/>
+                </svg>
+                Falar no WhatsApp
+            </a>
             <div class="menu-side-bar">
-                <button id="botao-menu"  aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir menu">
+                <button id="botao-menu" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir menu">
                     <span id="menu-icone"></span>
                 </button>
-                <ul class="lista-mobile">
+                <ul class="lista-mobile" id="menu">
                     <li><a href="#planos" class="link-menu">Planos</a></li>
-                    <li><a href="#mentores" class="link-menu">Consultoria</a></li>
-                    <li><a href="#metodologia" class="link-menu">Jurídico</a></li>
-                    <li><a href="#conteudo" class="link-menu">Economistas</a></li>
-                    <li><a href="#" class="link-menu">Empresarial</a>></li>
+                    <li><a href="#especialidades" class="link-menu">Equipe</a></li>
+                    <li><a href="#metodologia" class="link-menu">Metodologia</a></li>
+                    <li><a href="#conteudo" class="link-menu">Conteúdo</a></li>
+                    <li><a href="#localizacoes" class="link-menu">Localizações</a></li>
+                    <li><a href="#contato" class="link-menu">Contato</a></li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=5511996855623" class="link-menu link-menu-whatsapp" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
+    <main id="inicio">
         <section class="secao-principal">
             <div class="container-principal">
-                <p class="texto-de-impacto">Maior indíce de aprovação de crédito empresarial <i class="fa-solid fa-bolt"></i></p>
-                <h1 class="titulo">Liberação de crédito Empresarial!</h1>
-                <p class="texto-descritivo">Possui crédito pré-aprovado ou em fase de liberação? Nós assumimos todo seu processo contábil, econômico, jurídico e administrativo.</p>
-                <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5511996855623'" class="botao-geral" aria-label="Experimente nossa plataforma por 7 dias gratis">Fale com um Especialista</button>
+                <p class="texto-de-impacto hero-in delay-1">Maior indíce de aprovação de crédito empresarial <i class="fa-solid fa-bolt"></i></p>
+                <h1 class="titulo hero-in delay-2">Liberação de crédito Empresarial!</h1>
+                <p class="texto-descritivo hero-in delay-3">Possui crédito pré-aprovado ou em fase de liberação? Nós assumimos todo seu processo contábil, econômico, jurídico e administrativo.</p>
+                <a class="botao-whatsapp botao-whatsapp--lg hero-in delay-4" href="https://api.whatsapp.com/send?phone=5511996855623" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.1-.472-.149-.672.15-.199.297-.771.966-.945 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.521.149-.174.199-.298.298-.497.1-.199.05-.373-.025-.522-.074-.149-.672-1.619-.92-2.22-.242-.582-.487-.503-.672-.513l-.573-.01c-.199 0-.522.074-.795.373s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.199 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.007-1.413.248-.694.248-1.289.173-1.414-.074-.124-.272-.199-.57-.347z" fill="#fff"/>
+                        <path d="M12.004 2.003A9.95 9.95 0 0 0 2.02 12.003c0 1.751.457 3.448 1.326 4.942L2 22l4.237-1.114a9.956 9.956 0 0 0 5.749 1.745h.001c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.087a8.098 8.098 0 0 1-4.234-1.132l-.303-.18-2.51.66.67-2.449-.197-.316A8.088 8.088 0 0 1 3.92 12.003a8.081 8.081 0 0 1 8.083-8.08 8.08 8.08 0 0 1 8.08 8.08 8.081 8.081 0 0 1-8.08 8.087z" fill="#fff"/>
+                    </svg>
+                    Falar no WhatsApp
+                </a>
             </div>
-            <div class="container-img">
+            <div class="container-img hero-in delay-5">
                 <img src="img/mockup.png" alt="" class="foto">
                 <p class="descricao-de-impacto"><span class="destaque-cor">+ </span> de 25 mil empresas <span class="destaque">Impactadas</span></p>
             </div>
         </section>
-        <section class="secao-motivos">
+        <section class="secao-motivos reveal">
             <div class="container-motivos">
-                <h2 class="titulo-motivo">Como iremos <span class="destaque-cor">te ajudar</span> ?</h2>
+                <h2 class="titulo-motivo reveal delay-1">Como iremos <span class="destaque-cor">te ajudar</span> ?</h2>
                 <section class="bloco-assuntos">
-                    <div class="card-assunto">
+                    <div class="card-assunto reveal delay-1">
                         <i class="fa-solid fa-crown icone"></i>
                         <p class="nome">Partida Inicial no Trâmite</p>
                     </div>
-                    <div class="card-assunto">
+                    <div class="card-assunto reveal delay-2">
                         <i class="fa-solid fa-crown icone"></i>
                         <p class="nome">Documentações</p>
                     </div>
-                    <div class="card-assunto">
+                    <div class="card-assunto reveal delay-2">
                         <i class="fa-solid fa-coins icone"></i>
                         <p class="nome">Autenticação e Certificados</p>
                     </div>
-                    <div class="card-assunto">
+                    <div class="card-assunto reveal delay-3">
                         <i class="fa-solid fa-money-check-dollar icone"></i>
                         <p class="nome">Consultoria e assessoria financeira</p>
                     </div>
-                    <div class="card-assunto">
+                    <div class="card-assunto reveal delay-3">
                         <i class="fa-solid fa-sack-dollar icone"></i>
                         <p class="nome">Fundos de investimentos</p>
                     </div>
-                    <div class="card-assunto">
+                    <div class="card-assunto reveal delay-4">
                         <i class="fa-solid fa-wallet icone"></i>
                         <p class="nome">Criptomoedas e Investimentos</p>
                     </div>
-                    <div class="card-assunto">
+                    <div class="card-assunto reveal delay-4">
                         <i class="fa-solid fa-hand-holding-dollar icone"></i>
                         <p class="nome">Reserva de emergência</p>
                     </div>
-                    <div class="card-assunto">
+                    <div class="card-assunto reveal delay-5">
                         <i class="fa-solid fa-crown icone"></i>
                         <p class="nome">Governança Corporativa</p>
                     </div>
                 </section>
                 <section class="bloco-tecnicas">
-                    <div class="card">
+                    <div class="card reveal delay-1">
                         <i class="fa-solid fa-money-check-dollar icone"></i>
                         <h3 class="titulo-card">Documentações</h3>
                         <p class="descricao-card">Todos as documentações devem ser elaboradas seguindo rigidos padrões de conformidade estabelecidos pela Lei e pelo Banco Central, isso é primordial no sucesso do seu trâmite.</p>
                     </div>
-                    <div class="card">
+                    <div class="card reveal delay-2">
                         <i class="fa-solid fa-chart-simple icone"></i>
                         <h3 class="titulo-card">Autenticações</h3>
                         <p class="descricao-card">Todas as documentações e validações devem autenticadas via certificado digital e token padrão BACEN, todas as documentações e procedimentos devem possuir um token hash autenticado.</p>                    </div>
-                    <div class="card">
+                    <div class="card reveal delay-3">
                         <i class="fa-solid fa-wallet icone"></i>
                         <h3 class="titulo-card">Administração de crédito</h3>
                         <p class="descricao-card">Caso você ja tenha um crédito aprovado ou em fase de liberação, nós assumimos todo seu trâmite frente ao banco central e instituição que lhe concedeu o crédito.</p>                    </div>
                 </section>
-                <div class="container-acao">
+                <div class="container-acao reveal delay-2">
                     <h3 class="titulo">Para pequenas, médias e grandes empresas</h3>
                     <p class="descricao">Os resultados do seu negócio dependem de quanto está disposto a investir por ele!</p>
                     <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5511996855623'" class="botao-geral" aria-label="Experimente nossa plataforma por 7 dias gratis">Fale com um Especialista</button>
                 </div>
             </div>
         </section>
-        <section class="secao-principal">
-            <div class="container-img">
+        <section class="secao-principal reveal">
+            <div class="container-img reveal delay-1">
                 <img src="img/assinatura_gov.png" alt="" class="foto">
             </div>
-            <div class="container-principal" style="text-align: right">
+            <div class="container-principal reveal delay-2" style="text-align: right">
                 <p class="texto-de-impacto" style="color: #2364AF">Assine suas documentações bancárias e financeiras pelo GOV com total segurança jurídica <i class="fa-solid fa-bolt"></i></p>
                 <h1 class="titulo" style="color: #FABE0C">Assinatura Digital Gov</h1>
                 <p class="texto-descritivo" style="color: #46AF43"> Utilize a função vinculada de Parceiros do GOV e assine suas documentações de forma rápida e prática clicando no Botão abaixo.</p>
                 <button onclick="window.location.href='http://assinador.iti.br/'" class="botao-geral" aria-label="Experimente nossa plataforma por 7 dias gratis"  style="color: #FABE0C; border-color: #FABE0C; width: 300px"><img src="img/icon-govbr.png" alt="Ícone Gov" style="width: 40px; height: 20px; vertical-align: middle; margin-right: 8px; padding: 2px">Assinar Documentações</button>
             </div>
         </section>
-        <section class="secao-mentores" id="mentores">
-            <header class="cabecalho-mentor">
-                <h2 class="titulo"> Maiores players que são Sócios do <span class="destaque">Grupo Magnus Empresarial</span></h2>
-                <span class="border"></span>
-                <p class="descricao-titulo"> Contribuem financeiramente, tecnologicamente e diretamente no Grupo Magnus Empresarial.</p>
-            </header>
-            <div class="scroll">
-                <div class="container-mentor">
-                    <div class="card-mentor">
-                        <img src="img/thiago-nigro-card.webp" alt="Foto de Thiago Nigro" class="imagem-card">
-                        <div class="card-descricao">
-                            <h3 class="nome">Thiago Nigro</h3>
-                            <p class="descricao-mentor" style="color: white">Ceo e founder do Grupo Primo</p>     
-                        </div>
-                    </div>
-                    <div class="card-mentor">
-                        <img src="img/flavio-augusto.jpg" alt="Foto de Flávio Augusto" class="imagem-card">
-                        <div class="card-descricao">
-                            <h3 class="nome">Flávio Augusto</h3>
-                            <p class="descricao-mentor" style="color: white">Ceo e founder da Wise Up</p> 
-                        </div>
-                    </div>
-                    <div class="card-mentor">  
-                        <img src="img/perini.jpg" alt="Foto de Bruno perinir" class="imagem-card"> 
-                        <div class="card-descricao">
-                            <h3 class="nome">Bruno Perini</h3>
-                            <p class="descricao-mentor" style="color: white">Founder do Viver de rendas</p>                 
-                        </div>
-                    </div>
-                    <div class="card-mentor">  
-                        <img src="img/TIAGO_FOTO.jpg" alt="Foto de Tiago Brunet" class="imagem-card">  
-                        <div class="card-descricao">
-                            <h3 class="nome">Tiago Brunet</h3>
-                            <p class="descricao-mentor" style="color: white">Escritor, coaching e pastor</p>
-                        </div>
-                    </div>
-                    <div class="card-mentor">
-                        <img src="img/caio-carneiro.jpg" alt="Foto de Caio Carneiro" class="imagem-card">  
-                        <div class="card-descricao">
-                            <h3 class="nome">Caio Carneiro</h3>
-                            <p class="descricao-mentor" style="color: white">Founder do BuQme</p>                         
-                        </div> 
-                    </div>
-                    <div class="card-mentor">
-                        <img src="img/Joel-Jota.jpg" alt="Foto de Joel Jota" class="imagem-card">  
-                        <div class="card-descricao">
-                            <h3 class="nome">Joel Jota</h3>
-                            <p class="descricao-mentor" style="color: white">Treinador de alta performance</p>                          
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="button-control-left botao-carrosel" id="mentor-button-left" aria-label="Avançar slider"><i class="fa-solid fa-arrow-left"></i></button>
-            <button type="button" class="button-control-right botao-carrosel" id="mentor-button-right" aria-label="Voltar slider"><i class="fa-solid fa-arrow-right"></i></button>
-            <button onclick="window.location.href='https://api.whatsapp.com/send?phone=5511996855623'" class="botao-geral mentor-botao" aria-label="Quero assinar e me tornar assinante">Quero falar com um Especialista</button>
-        </section>
-        <section class="secao-numeros">
-            <h2 class="titulo-numero"> O resultado é com a <span class="destaque-cor">gente!</span></h2>
+        <section class="secao-numeros reveal">
+            <h2 class="titulo-numero reveal delay-1"> O resultado é com a <span class="destaque-cor">gente!</span></h2>
             <div class="container-numeros">
-                <div class="bloco-numeros">
+                <div class="bloco-numeros reveal delay-1">
                     <h3 class="numero"><span class="destaque-cor">+25</span> mil</h3>
                     <p class="descricao">empresas transformadas financeiramente</p>
                 </div>
-                <div class="bloco-numeros">
+                <div class="bloco-numeros reveal delay-2">
                     <h3 class="numero"><span class="destaque-cor">+ 37</span> mil</h3>
                     <p class="descricao">Documentações autenticadas</p>
                 </div>
-                <div class="bloco-numeros">
+                <div class="bloco-numeros reveal delay-3">
                     <h3 class="numero"><span class="destaque-cor">+50</span></h3>
                     <p class="descricao">Colaboradores e profissionais habilitados</p>
                 </div>
-                <div class="bloco-numeros">
+                <div class="bloco-numeros reveal delay-4">
                     <h3 class="numero"><span class="destaque-cor">9.97</span> NPS</h3>
                     <p class="descricao">Alta taxa de avaliação entre os clientes</p>
                 </div>
             </div>
         </section>
-        <section class="secao-metodologia" id="metodologia">
-            <h2 class="titulo-metodologia">Nossa <span class="destaque">metodologia</span> <span class="destaque-borda">de sucesso!</span></h2>
+
+        <section class="secao-especialidades reveal" id="especialidades">
+            <header class="especialidades-cabecalho reveal delay-1">
+                <h2 class="especialidades-titulo">Equipe com experiência prática e <span class="destaque-cor">visão de negócio</span></h2>
+                <p class="especialidades-descricao">Profissionais preparados para unir análise econômica, leitura de mercado e atuação próxima do empresário.</p>
+            </header>
+            <div class="experts">
+                <button class="carousel-btn left" type="button" aria-label="Anterior">‹</button>
+                <div class="experts-viewport">
+                    <div class="experts-wrapper">
+                        <article class="expert">
+                            <div class="expert-inner">
+                                <div class="expert-front">
+                                    <img src="img/equipe/afonso.png" alt="Economista Afonso" />
+                                    <div class="expert-body">
+                                        <h3>AFONSO REIS</h3>
+                                        <p class="expert-role">Economista Sênior</p>
+                                    </div>
+                                </div>
+                                <div class="expert-back">
+                                    <div class="expert-back-header">
+                                        <img class="expert-back-avatar" src="img/equipe/afonso.png" alt="" width="54" height="54" decoding="async" />
+                                        <div class="expert-back-heading">
+                                            <h3>Afonso Reis Duarte</h3>
+                                            <p class="expert-role">Economista Sênior</p>
+                                        </div>
+                                    </div>
+                                    <hr class="expert-back-rule" />
+                                    <div class="expert-back-body">
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Especialidade</span>
+                                            <p class="expert-field-specialty">Acompanhamento e Liberação de Crédito Digital</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Registro</span>
+                                            <p class="expert-field-registry">CORECON-SP 15812</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Sobre</span>
+                                            <p class="expert-field-about">Profissional com ampla experiência em economia aplicada e consultoria estratégica empresarial, atuando no assessoramento econômico.</p>
+                                        </div>
+                                    </div>
+                                    <div class="expert-back-footer">
+                                        <hr class="expert-back-rule" />
+                                        <p class="expert-back-hint">Clique para voltar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="expert">
+                            <div class="expert-inner">
+                                <div class="expert-front">
+                                    <img src="img/equipe/gabriel.jpg" alt="Economista Gabriel" />
+                                    <div class="expert-body">
+                                        <h3>GABRIEL ALVES</h3>
+                                        <p class="expert-role">Economista</p>
+                                    </div>
+                                </div>
+                                <div class="expert-back">
+                                    <div class="expert-back-header">
+                                        <img class="expert-back-avatar" src="img/equipe/gabriel.jpg" alt="" width="54" height="54" decoding="async" />
+                                        <div class="expert-back-heading">
+                                            <h3>Gabriel Alves da Silva</h3>
+                                            <p class="expert-role">Economista</p>
+                                        </div>
+                                    </div>
+                                    <hr class="expert-back-rule" />
+                                    <div class="expert-back-body">
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Especialidade</span>
+                                            <p class="expert-field-specialty">Análise Financeira e Modelagem Econômica</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Registro</span>
+                                            <p class="expert-field-registry">CORECON-SP 38362</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Sobre</span>
+                                            <p class="expert-field-about">Especialista em análise financeira e modelagem econômica, com atuação em projeções e estudos de viabilidade.</p>
+                                        </div>
+                                    </div>
+                                    <div class="expert-back-footer">
+                                        <hr class="expert-back-rule" />
+                                        <p class="expert-back-hint">Clique para voltar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="expert">
+                            <div class="expert-inner">
+                                <div class="expert-front">
+                                    <img src="img/equipe/daniel.jpg" alt="Economista Daniel" />
+                                    <div class="expert-body">
+                                        <h3>DANIEL GUILHERME</h3>
+                                        <p class="expert-role">Economista</p>
+                                    </div>
+                                </div>
+                                <div class="expert-back">
+                                    <div class="expert-back-header">
+                                        <img class="expert-back-avatar" src="img/equipe/daniel.jpg" alt="" width="54" height="54" decoding="async" />
+                                        <div class="expert-back-heading">
+                                            <h3>Daniel Guilherme de Lima</h3>
+                                            <p class="expert-role">Economista</p>
+                                        </div>
+                                    </div>
+                                    <hr class="expert-back-rule" />
+                                    <div class="expert-back-body">
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Especialidade</span>
+                                            <p class="expert-field-specialty">Planejamento Financeiro e Análise de Viabilidade</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Registro</span>
+                                            <p class="expert-field-registry">CORECON-SP 36332</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Sobre</span>
+                                            <p class="expert-field-about">Atua na Magnus com foco em planejamento financeiro estratégico, análise de viabilidade econômica e estruturação de projetos empresariais.</p>
+                                        </div>
+                                    </div>
+                                    <div class="expert-back-footer">
+                                        <hr class="expert-back-rule" />
+                                        <p class="expert-back-hint">Clique para voltar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="expert">
+                            <div class="expert-inner">
+                                <div class="expert-front">
+                                    <img src="img/equipe/michelle.jpg" alt="Economista Michelle" />
+                                    <div class="expert-body">
+                                        <h3>MICHELLE CRISTINA</h3>
+                                        <p class="expert-role">Economista</p>
+                                    </div>
+                                </div>
+                                <div class="expert-back">
+                                    <div class="expert-back-header">
+                                        <img class="expert-back-avatar" src="img/equipe/michelle.jpg" alt="" width="54" height="54" decoding="async" />
+                                        <div class="expert-back-heading">
+                                            <h3>Michelle Cristina Reis Flaminio</h3>
+                                            <p class="expert-role">Economista</p>
+                                        </div>
+                                    </div>
+                                    <hr class="expert-back-rule" />
+                                    <div class="expert-back-body">
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Especialidade</span>
+                                            <p class="expert-field-specialty">Gestão Econômico-Financeira e Controladoria</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Registro</span>
+                                            <p class="expert-field-registry">CORECON-SP 37795</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Sobre</span>
+                                            <p class="expert-field-about">Responsável por análises econômicas aplicadas à gestão empresarial, com ênfase em controladoria e indicadores de desempenho.</p>
+                                        </div>
+                                    </div>
+                                    <div class="expert-back-footer">
+                                        <hr class="expert-back-rule" />
+                                        <p class="expert-back-hint">Clique para voltar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="expert">
+                            <div class="expert-inner">
+                                <div class="expert-front">
+                                    <img src="img/equipe/ademir.jpg" alt="Economista Ademir" />
+                                    <div class="expert-body">
+                                        <h3>ADEMIR ANTONIO</h3>
+                                        <p class="expert-role">Economista</p>
+                                    </div>
+                                </div>
+                                <div class="expert-back">
+                                    <div class="expert-back-header">
+                                        <img class="expert-back-avatar" src="img/equipe/ademir.jpg" alt="" width="54" height="54" decoding="async" />
+                                        <div class="expert-back-heading">
+                                            <h3>Ademir Antonio Moreira Rocha</h3>
+                                            <p class="expert-role">Economista</p>
+                                        </div>
+                                    </div>
+                                    <hr class="expert-back-rule" />
+                                    <div class="expert-back-body">
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Especialidade</span>
+                                            <p class="expert-field-specialty">Consultoria Econômica Empresarial</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Registro</span>
+                                            <p class="expert-field-registry">CORECON-SP 37459</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Sobre</span>
+                                            <p class="expert-field-about">Atua com consultoria econômica voltada à eficiência empresarial, avaliação de cenários e suporte estratégico à gestão.</p>
+                                        </div>
+                                    </div>
+                                    <div class="expert-back-footer">
+                                        <hr class="expert-back-rule" />
+                                        <p class="expert-back-hint">Clique para voltar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="expert">
+                            <div class="expert-inner">
+                                <div class="expert-front">
+                                    <img src="img/equipe/paloma.jpg" alt="Economista Paloma" />
+                                    <div class="expert-body">
+                                        <h3>PALOMA LEITE</h3>
+                                        <p class="expert-role">Economista</p>
+                                    </div>
+                                </div>
+                                <div class="expert-back">
+                                    <div class="expert-back-header">
+                                        <img class="expert-back-avatar" src="img/equipe/paloma.jpg" alt="" width="54" height="54" decoding="async" />
+                                        <div class="expert-back-heading">
+                                            <h3>Paloma Leite Freitas</h3>
+                                            <p class="expert-role">Economista</p>
+                                        </div>
+                                    </div>
+                                    <hr class="expert-back-rule" />
+                                    <div class="expert-back-body">
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Especialidade</span>
+                                            <p class="expert-field-specialty">Gestão de Custos e Orçamento Empresarial</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Registro</span>
+                                            <p class="expert-field-registry">CORECON-SP 37100</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Sobre</span>
+                                            <p class="expert-field-about">Atua com foco em gestão de custos, estruturação orçamentária e análise de rentabilidade para maior eficiência operacional.</p>
+                                        </div>
+                                    </div>
+                                    <div class="expert-back-footer">
+                                        <hr class="expert-back-rule" />
+                                        <p class="expert-back-hint">Clique para voltar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="expert">
+                            <div class="expert-inner">
+                                <div class="expert-front">
+                                    <img src="img/equipe/fernanda.jpg" alt="Equipe Magnus" />
+                                    <div class="expert-body">
+                                        <h3>FERNANDA BERNADETE</h3>
+                                        <p class="expert-role">Economista</p>
+                                    </div>
+                                </div>
+                                <div class="expert-back">
+                                    <div class="expert-back-header">
+                                        <img class="expert-back-avatar" src="img/equipe/fernanda.jpg" alt="" width="54" height="54" decoding="async" />
+                                        <div class="expert-back-heading">
+                                            <h3>Fernanda Bernadete da Silva</h3>
+                                            <p class="expert-role">Economista</p>
+                                        </div>
+                                    </div>
+                                    <hr class="expert-back-rule" />
+                                    <div class="expert-back-body">
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Especialidade</span>
+                                            <p class="expert-field-specialty">Análise Econômica e Planejamento Estratégico</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Registro</span>
+                                            <p class="expert-field-registry">CORECON-SP 34943</p>
+                                        </div>
+                                        <div class="expert-field">
+                                            <span class="expert-field-label">Sobre</span>
+                                            <p class="expert-field-about">Especialista em análise econômica aplicada ao planejamento estratégico, com atuação em estudos de mercado e projeções financeiras.</p>
+                                        </div>
+                                    </div>
+                                    <div class="expert-back-footer">
+                                        <hr class="expert-back-rule" />
+                                        <p class="expert-back-hint">Clique para voltar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="carousel-btn right" type="button" aria-label="Próximo">›</button>
+            </div>
+        </section>
+        <section class="secao-metodologia reveal" id="metodologia">
+            <h2 class="titulo-metodologia reveal delay-1">Nossa <span class="destaque">metodologia</span> <span class="destaque-borda">de sucesso!</span></h2>
             <div class="container-metodo">
                 <div class="box-buttons">
                     <button class="botao-metodo" data-id="secao-1" id="button-01" aria-label="Metodo conhecer">
@@ -232,7 +489,7 @@
                 </div>
             </div>
         </section>
-        <section class="secao-modulos" id="conteudo">
+        <section class="secao-modulos reveal" id="conteudo">
             <h2 class="titulo-modulo">Metodologia <span class="destaque">Magnus</span></h2>
             <div class="container-geral">
                 <div class="container-modulo">
@@ -255,53 +512,91 @@
                     <li class="item-modulo">Modulo 7 - Plano de ação</li>
                     <li class="item-modulo">Modulo 8 - Acompanhamento e entrega</li>
                     <li class="item-modulo">Modulo 9 - Resultados e Feedbacks</li>
-                    <li class="item-modulo"><span class="destaque-cor">Bônus</span> - Curso de BDR's</li>
-                    <li class="item-modulo"><span class="destaque-cor">Bônus</span> - Curso de alta performance</li>
                 </ul>
             </div>
         </section>
-        <section class="secao-feedback">
-            <header class="cabecalho-feedback">
+        <section class="secao-feedback reveal">
+            <header class="cabecalho-feedback reveal delay-1">
                 <h2 class="titulo-feedback">Veja o que nossos clientes falam, <span class="destaque">resultado!!</span></h2>
-                <p class="subtitulo-feedback">Feedback's</p>
+                <p class="subtitulo-feedback">Depoimentos reais de empresários atendidos pela Magnus</p>
             </header>
-            <div class="scroll">
+            <div class="scroll reveal delay-2">
                 <div class="container-feedback">
-                    <div class="card-feedback">
-                        <div class="perfil">
-                            <img src="img/user-1.jpg" class="foto-perfil" alt>
-                            <h3 class="nome-perfil">Lucas Torres</h3>
+                    <article class="card-feedback">
+                        <div class="feedback-card-top">
+                            <div class="perfil">
+                                <img src="img/user-1.jpg" class="foto-perfil" alt="Foto de Lucas Torres">
+                                <div>
+                                    <h3 class="nome-perfil">Lucas Torres</h3>
+                                    <p class="feedback-empresa">TechLog Transportes</p>
+                                </div>
+                            </div>
+                            <time class="feedback-data" datetime="2024-01-18">Jan/2024</time>
                         </div>
-                        <p class="descricao-feedback">Fechei com a Magnus, ja não tinha esperança de conseguir o valor completo porém conseguir uma aprovação até melhor, só gratidão, compromisso e respeito!.</p>
-                    </div>
-                    <div class="card-feedback">
-                        <div class="perfil">
-                            <img src="img/user-2.jpg" class="foto-perfil" alt>
-                            <h3 class="nome-perfil">Eduardo Silva</h3>
+                        <p class="feedback-cargo">Diretor Financeiro</p>
+                        <p class="feedback-estrelas" aria-label="5 de 5 estrelas">★★★★★</p>
+                        <blockquote class="descricao-feedback">Fechei com a Magnus, já não tinha esperança de conseguir o valor completo, porém consegui uma aprovação até melhor. Só gratidão, compromisso e respeito!</blockquote>
+                    </article>
+                    <article class="card-feedback">
+                        <div class="feedback-card-top">
+                            <div class="perfil">
+                                <img src="img/user-2.jpg" class="foto-perfil" alt="Foto de Eduardo Silva">
+                                <div>
+                                    <h3 class="nome-perfil">Eduardo Silva</h3>
+                                    <p class="feedback-empresa">Silva Comércio e Distribuição</p>
+                                </div>
+                            </div>
+                            <time class="feedback-data" datetime="2023-11-09">Nov/2023</time>
                         </div>
-                        <p class="descricao-feedback">Contratei uma vez e trabalho com eles até hoje, o pessoal é top demais sabe trabalhar, não promete o que não consegue, hoje a empresa aqui é outra coisa.</p>
-                    </div>
-                    <div class="card-feedback">
-                        <div class="perfil">
-                            <img src="img/user-3.jpg" class="foto-perfil" alt>
-                            <h3 class="nome-perfil">Julia Beatriz</h3>
+                        <p class="feedback-cargo">Proprietário</p>
+                        <p class="feedback-estrelas" aria-label="5 de 5 estrelas">★★★★★</p>
+                        <blockquote class="descricao-feedback">Contratei uma vez e trabalho com eles até hoje. O pessoal é top demais, sabe trabalhar e não promete o que não consegue. Hoje a empresa aqui é outra coisa.</blockquote>
+                    </article>
+                    <article class="card-feedback">
+                        <div class="feedback-card-top">
+                            <div class="perfil">
+                                <img src="img/user-3.jpg" class="foto-perfil" alt="Foto de Julia Beatriz">
+                                <div>
+                                    <h3 class="nome-perfil">Julia Beatriz</h3>
+                                    <p class="feedback-empresa">Beatriz Moda Atacado</p>
+                                </div>
+                            </div>
+                            <time class="feedback-data" datetime="2024-06-22">Jun/2024</time>
                         </div>
-                        <p class="descricao-feedback">Sempre tive receio de fazer esses tipos de investimentos mas me surpreendeu muito o resultado, saimos das dívidas e hoje estamos contratando mais 5 funcionários.</p>
-                    </div>
-                    <div class="card-feedback">
-                        <div class="perfil">
-                            <img src="img/user-4.jpg" class="foto-perfil" alt>
-                            <h3 class="nome-perfil">Ana Torres</h3>
+                        <p class="feedback-cargo">Gerente Administrativa</p>
+                        <p class="feedback-estrelas" aria-label="5 de 5 estrelas">★★★★★</p>
+                        <blockquote class="descricao-feedback">Sempre tive receio de fazer esse tipo de investimento, mas me surpreendeu muito o resultado. Saímos das dívidas e hoje estamos contratando mais 5 funcionários.</blockquote>
+                    </article>
+                    <article class="card-feedback">
+                        <div class="feedback-card-top">
+                            <div class="perfil">
+                                <img src="img/user-4.jpg" class="foto-perfil" alt="Foto de Ana Torres">
+                                <div>
+                                    <h3 class="nome-perfil">Ana Torres</h3>
+                                    <p class="feedback-empresa">Torres Serviços Industriais</p>
+                                </div>
+                            </div>
+                            <time class="feedback-data" datetime="2023-09-14">Set/2023</time>
                         </div>
-                        <p class="descricao-feedback">Só a agradecer ao Dr Pereira e sua equipe, dei trabalho mas conseguiram resolver meu caso, pessoal super compromissado e só pararam quando consegui meu crédito!.</p>
-                    </div>
-                    <div class="card-feedback">
-                        <div class="perfil">
-                            <img src="img/user-5.jpg" class="foto-perfil" alt>
-                            <h3 class="nome-perfil">Beatriz Marinho</h3>
+                        <p class="feedback-cargo">Sócia-fundadora</p>
+                        <p class="feedback-estrelas" aria-label="5 de 5 estrelas">★★★★★</p>
+                        <blockquote class="descricao-feedback">Só a agradecer ao Dr. Pereira e sua equipe. Dei trabalho, mas conseguiram resolver meu caso. Pessoal super comprometido e só parou quando consegui meu crédito!</blockquote>
+                    </article>
+                    <article class="card-feedback">
+                        <div class="feedback-card-top">
+                            <div class="perfil">
+                                <img src="img/user-5.jpg" class="foto-perfil" alt="Foto de Beatriz Marinho">
+                                <div>
+                                    <h3 class="nome-perfil">Beatriz Marinho</h3>
+                                    <p class="feedback-empresa">Marinho Group</p>
+                                </div>
+                            </div>
+                            <time class="feedback-data" datetime="2024-04-03">Abr/2024</time>
                         </div>
-                        <p class="descricao-feedback">Para mim o Grupo Magnus foi o único que conseguiu resolver meu problema de fato e hoje somos parceiros de negócios, lucramos muito junto fez muito sentido, super recomendo a equipe é top!.</p>
-                    </div>
+                        <p class="feedback-cargo">Diretora Comercial</p>
+                        <p class="feedback-estrelas" aria-label="5 de 5 estrelas">★★★★★</p>
+                        <blockquote class="descricao-feedback">Para mim o Grupo Magnus foi o único que conseguiu resolver meu problema de fato. Hoje somos parceiros de negócios, lucramos muito juntos. Super recomendo, a equipe é top!</blockquote>
+                    </article>
                 </div>
             </div>  
             <div class="feedback-button">
@@ -311,7 +606,7 @@
         </section>
         <br>
         <!--
-            <section class="secao-planos" id="planos">
+            <section class="secao-planos reveal" id="planos">
             <header class="cabecalho">
                 <h2 class="titulo-header">Assinatura e Planos</h2>
                 <p class="descricao-header">Assine agora e garanta o seu futuro !</p>
@@ -363,7 +658,7 @@
                 <button class="botao-assinatura">Assinar plano</button>
             </div>
         </section>
-        <section class="secao-perguntas" aria-label="Assinar plano mensal">
+        <section class="secao-perguntas reveal" aria-label="Assinar plano mensal">
             <h2 class="titulo-perguntas">Perguntas frequentes</h2>
             <div class="bloco-conteudo">
                 <button class="botao-conteudo" data-id="assinatura" id="primeiro"><i class="fa-solid fa-cart-shopping icone" aria-label="Dúvidas sobre assinatura"></i> Assinatura</button>
@@ -489,22 +784,75 @@
         </section>
         -->
         
+        <section class="secao-localizacoes reveal" id="localizacoes">
+            <header class="localizacoes-cabecalho reveal delay-1">
+                <h2 class="localizacoes-titulo">Nossas <span class="destaque-cor">localizações</span></h2>
+                <p class="localizacoes-descricao">Encontre a unidade Magnus mais próxima de você.</p>
+            </header>
+            <div class="localizacoes-grid">
+                <article class="localizacao-card reveal delay-1">
+                    <p class="localizacao-razao">Magnus Santa Catarina </p>
+                    <p class="localizacao-endereco">Rua Angelo Dias, 207, Sala 22<br />Centro — Blumenau, SC<br />CEP 89010-020</p>
+                    <div class="localizacao-mapa">
+                        <iframe src="https://maps.google.com/maps?q=Rua+Angelo+Dias,+207,+Centro,+Blumenau,+SC,+89010-020&amp;hl=pt-BR&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Matriz Blumenau"></iframe>
+                    </div>
+                </article>
+                <article class="localizacao-card reveal delay-2">
+                    <p class="localizacao-razao">Magnus São Paulo</p>
+                    <p class="localizacao-endereco">Av. Brig. Faria Lima, 3700<br />Itaim Bibi — São Paulo, SP<br />CEP 04538-133</p>
+                    <div class="localizacao-mapa">
+                        <iframe src="https://maps.google.com/maps?q=Av.+Brig.+Faria+Lima,+3700,+Itaim+Bibi,+Sao+Paulo,+SP,+04538-133&amp;hl=pt-BR&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Magnus São Paulo"></iframe>
+                    </div>
+                </article>
+                <article class="localizacao-card reveal delay-3">
+                    <p class="localizacao-razao">Magnus Rio de Janeiro</p>
+                    <p class="localizacao-endereco">Av. Saquarema, 567<br />Centro — Saquarema, RJ</p>
+                    <div class="localizacao-mapa">
+                        <iframe src="https://maps.google.com/maps?q=Av.+Saquarema,+567,+Centro,+Saquarema,+RJ&amp;hl=pt-BR&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Magnus Rio de Janeiro"></iframe>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-        <div class="footer-top">
-            <h3 class="footer-titulo" style="text-align: center">Grupo Magnus Empresarial <span class="destaque-cor">&#169</span> Todos os direitos reservados 2024</h3>
+    <footer class="site-footer reveal" id="contato">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a class="footer-logo-link" href="#" aria-label="Magnus Empresarial — início">
+                    <img class="footer-logo" src="img/logo-magnus2-semfundo.png" width="216" height="120" alt="Magnus Empresarial" loading="lazy" decoding="async" />
+                </a>
+                <p class="footer-tagline">Assessoria empresarial com foco em crédito, economia e estratégia para o seu negócio.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Links do rodapé">
+                <h3 class="footer-heading">Navegação</h3>
+                <ul>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#especialidades">Equipe</a></li>
+                    <li><a href="#metodologia">Metodologia</a></li>
+                    <li><a href="#conteudo">Conteúdo</a></li>
+                    <li><a href="#localizacoes">Localizações</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-contact">
+                <h3 class="footer-heading">Informações</h3>
+                <p><strong>Nome fantasia</strong><br />Magnus Relações Empresariais LTDA</p>
+                <p><strong>CNPJ</strong><br />08.635.420/0001-56</p>
+                <p><strong>WhatsApp</strong><br /><a href="https://api.whatsapp.com/send?phone=5511996855623" target="_blank" rel="noopener noreferrer">(11) 99685-5623</a></p>
+            </div>
         </div>
-        <br>
         <div class="footer-bottom">
-            <div class="logo">
-                <img src="img\logo-magnus2-semfundo.png" alt="Logomarca">
-            </div>
-            <div class="info">
-                <h3 class="footer-titulo">Nome Fantasia: Magnus Empresarial Ltda <br> Razão Social: 53.400.423 BRUNO MARCOLINO DA SILVA <br> CNPJ: 53.400.423/0001-65 <br> Endereço: RUA CAMPINAS DO PIAUI, 849 - ITAQUERA - SAO PAULO - SP CEP 08210-000</h3>
-            </div>
+            <p>© <span id="footer-year"></span> Grupo Magnus Empresarial. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=5511996855623" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.1-.472-.149-.672.15-.199.297-.771.966-.945 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.521.149-.174.199-.298.298-.497.1-.199.05-.373-.025-.522-.074-.149-.672-1.619-.92-2.22-.242-.582-.487-.503-.672-.513l-.573-.01c-.199 0-.522.074-.795.373s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.199 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.007-1.413.248-.694.248-1.289.173-1.414-.074-.124-.272-.199-.57-.347z" fill="#fff"/>
+            <path d="M12.004 2.003A9.95 9.95 0 0 0 2.02 12.003c0 1.751.457 3.448 1.326 4.942L2 22l4.237-1.114a9.956 9.956 0 0 0 5.749 1.745h.001c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.087a8.098 8.098 0 0 1-4.234-1.132l-.303-.18-2.51.66.67-2.449-.197-.316A8.088 8.088 0 0 1 3.92 12.003a8.081 8.081 0 0 1 8.083-8.08 8.08 8.08 0 0 1 8.08 8.08 8.081 8.081 0 0 1-8.08 8.087z" fill="#fff"/>
+        </svg>
+    </a>
     <script src="https://kit.fontawesome.com/c7d2131b9d.js" crossorigin="anonymous"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/especialidades.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

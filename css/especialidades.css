@@ -1,0 +1,337 @@
+#especialidades {
+    --esp-primary: #025D40;
+    --esp-primary-dark: #013d2a;
+    --esp-accent: #99C720;
+    --esp-muted: #5a5a5a;
+    --esp-shadow: 0 24px 60px rgba(2, 93, 64, 0.12);
+    --esp-shadow-strong: 0 30px 80px rgba(2, 93, 64, 0.18);
+    --esp-radius: 15px;
+    padding: 4rem 1rem;
+    background-color: #f8faf8;
+}
+
+#especialidades .especialidades-cabecalho {
+    max-width: 76rem;
+    margin: 0 auto 2.4rem;
+    text-align: center;
+}
+
+#especialidades .especialidades-titulo {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #025D40;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+}
+
+#especialidades .especialidades-descricao {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--esp-muted);
+    margin: 0;
+    max-width: 70rem;
+    margin-inline: auto;
+}
+
+#especialidades .experts {
+    position: relative;
+    overflow: visible;
+    max-width: 118rem;
+    margin: 0 auto;
+}
+
+#especialidades .experts-viewport {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 clamp(48px, 6vw, 58px);
+    box-sizing: border-box;
+}
+
+#especialidades .experts-wrapper {
+    display: flex;
+    gap: 18px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    touch-action: pan-y pinch-zoom;
+}
+
+#especialidades .expert {
+    flex: 0 0 calc(33.333% - 12px);
+    max-width: calc(33.333% - 12px);
+    min-width: calc(33.333% - 12px);
+    overflow: visible;
+    transition: transform 0.28s ease;
+    cursor: pointer;
+    position: relative;
+    perspective: 1200px;
+}
+
+#especialidades .expert:hover {
+    transform: translateY(-8px);
+}
+
+#especialidades .expert:hover .expert-front {
+    box-shadow: var(--esp-shadow-strong);
+}
+
+#especialidades .expert-inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    min-height: 0;
+    transition: transform 0.65s ease;
+    transform-style: preserve-3d;
+    border-radius: var(--esp-radius);
+    transform-origin: center center;
+}
+
+#especialidades .expert.flipped .expert-inner {
+    transform: rotateY(180deg);
+}
+
+#especialidades .expert-front,
+#especialidades .expert-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--esp-radius);
+}
+
+#especialidades .expert-front {
+    overflow: hidden;
+    transform: rotateY(0deg) translateZ(0.5px);
+    box-shadow: var(--esp-shadow);
+    background: #0f1116;
+}
+
+#especialidades .expert-front .expert-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.85) 100%);
+    z-index: 2;
+}
+
+#especialidades .expert-front .expert-body h3 {
+    color: #fff;
+    margin: 0;
+    font-size: clamp(15px, 2vw, 18px);
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+}
+
+#especialidades .expert-role {
+    margin: 8px 0 0;
+    padding: 0;
+    font-size: clamp(10px, 1.35vw, 12px);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.35;
+}
+
+#especialidades .expert-front .expert-role {
+    color: var(--esp-accent);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+#especialidades .expert-back .expert-role {
+    margin: 4px 0 0;
+    font-size: clamp(12px, 1.45vw, 14px);
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--esp-primary);
+}
+
+#especialidades .expert-back {
+    transform: rotateY(180deg) translateZ(0.5px);
+    background: #ffffff;
+    border: 1px solid rgba(2, 93, 64, 0.12);
+    padding: clamp(16px, 3vw, 24px);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: var(--esp-shadow);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    color: #333;
+}
+
+#especialidades .expert-back-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+#especialidades .expert-back-avatar {
+    width: clamp(44px, 11vw, 54px);
+    height: clamp(44px, 11vw, 54px);
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--esp-accent);
+}
+
+#especialidades .expert-back-heading {
+    flex: 1;
+    min-width: 0;
+    padding-top: 2px;
+}
+
+#especialidades .expert-back-heading h3 {
+    margin: 0;
+    font-size: clamp(15px, 1.85vw, 18px);
+    font-weight: 700;
+    line-height: 1.25;
+    color: #333;
+}
+
+#especialidades .expert-back-rule {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 14px 0 16px;
+}
+
+#especialidades .expert-back-body {
+    flex: 1;
+    min-height: 0;
+}
+
+#especialidades .expert-field {
+    margin-bottom: clamp(14px, 2.5vw, 18px);
+}
+
+#especialidades .expert-field-label {
+    display: block;
+    font-size: clamp(10px, 1.15vw, 11px);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+#especialidades .expert-field-specialty,
+#especialidades .expert-field-registry {
+    margin: 0;
+    font-size: clamp(13px, 1.5vw, 15px);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+#especialidades .expert-field-registry {
+    color: var(--esp-primary);
+}
+
+#especialidades .expert-field-about {
+    margin: 0;
+    font-size: clamp(12px, 1.4vw, 13px);
+    font-weight: 400;
+    line-height: 1.55;
+    color: #666;
+}
+
+#especialidades .expert-back-footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: clamp(12px, 2vw, 18px);
+}
+
+#especialidades .expert-back-hint {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(11px, 1.25vw, 12px);
+    color: #999;
+}
+
+#especialidades .expert-front img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.7s ease;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+#especialidades .expert:hover .expert-front img {
+    transform: translateZ(0) scale(1.06);
+}
+
+#especialidades .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(2, 93, 64, 0.25);
+    border-radius: var(--esp-radius);
+    background: rgba(15, 17, 22, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.85;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+    transition: opacity 0.35s ease, background 0.35s ease, transform 0.35s ease;
+    font-size: 22px;
+    line-height: 1;
+}
+
+#especialidades .carousel-btn:hover {
+    opacity: 1;
+    background: var(--esp-primary);
+    border-color: var(--esp-accent);
+    transform: translateY(-50%) scale(1.06);
+    box-shadow: 0 14px 34px rgba(2, 93, 64, 0.35);
+}
+
+#especialidades .carousel-btn.left {
+    left: 12px;
+}
+
+#especialidades .carousel-btn.right {
+    right: 12px;
+}
+
+@media (max-width: 960px) {
+    #especialidades .especialidades-titulo {
+        font-size: 2.6rem;
+    }
+    #especialidades .expert {
+        flex: 0 0 calc(50% - 9px);
+        max-width: calc(50% - 9px);
+        min-width: calc(50% - 9px);
+    }
+    #especialidades .expert-back {
+        padding: 16px 14px;
+    }
+}
+
+@media (max-width: 720px) {
+    #especialidades .experts-viewport {
+        padding: 0;
+    }
+    #especialidades .expert {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+    }
+    #especialidades .carousel-btn {
+        display: none;
+    }
+}
