@@ -130,6 +130,11 @@
     color: #fff;
 }
 
+.secao-carrossel .slide-botao.botao-whatsapp i {
+    font-size: 1.15em;
+    line-height: 1;
+}
+
 .secao-carrossel .slide-botao-primario:not(.botao-whatsapp) {
     background-color: #fff;
     color: #025D40;
